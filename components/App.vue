@@ -1,9 +1,9 @@
 <template>
     <div id="app" class="app">
         <header>
-            <h1>CSS Containment Example</h1>
-            <a href="https://github.com/arnellebalane/css-containment-example" target="_blank" rel="noopener noreferrer">
-                github.com/arnellebalane/css-containment-example
+            <h1>Contained <code>position: fixed;</code></h1>
+            <a href="https://github.com/arnellebalane/contained-position-fixed" target="_blank" rel="noopener noreferrer">
+                github.com/arnellebalane/contained-position-fixed
             </a>
         </header>
 
@@ -31,10 +31,7 @@
     header {
         flex-shrink: 0;
         padding: 52px 10vmin;
-    }
-
-    header * {
-        margin: 0;
+        text-align: center;
     }
 
     main {

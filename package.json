@@ -1,5 +1,5 @@
 {
-  "name": "css-containment-example",
+  "name": "contained-position-fixed",
   "version": "1.0.0",
   "description": "CSS Containment Property Demo",
   "main": "index.js",
