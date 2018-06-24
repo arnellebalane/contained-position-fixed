@@ -9,7 +9,22 @@
 
         <main>
             <div class="container">
-                <div class="element"></div>
+                <pre><code>.container {</code></pre>
+                <pre><code>    width: 100%;</code></pre>
+                <pre><code>    background-color: #3f51b5;</code></pre>
+                <pre><code>    contain: paint;</code></pre>
+                <pre><code>}</code></pre>
+
+                <div class="element">
+                    <pre><code>.element {</code></pre>
+                    <pre><code>    width: 50vmin;</code></pre>
+                    <pre><code>    height: 50vmin;</code></pre>
+                    <pre><code>    position: fixed;</code></pre>
+                    <pre><code>    right: 0;</code></pre>
+                    <pre><code>    bottom: 0;</code></pre>
+                    <pre><code>    background-color: #e91e63;</code></pre>
+                    <pre><code>}</code></pre>
+                </div>
             </div>
         </main>
     </div>
@@ -41,9 +56,22 @@
         padding-top: 0;
     }
 
+    main div {
+        padding: 5vmin;
+    }
+
+    main pre {
+        margin: 0;
+    }
+
+    main code {
+        display: block;
+        color: #fff;
+    }
+
     .container {
         width: 100%;
-        background-color: #3F51B5;
+        background-color: #3f51b5;
     }
 
     .element {
@@ -52,6 +80,6 @@
         position: fixed;
         right: 0;
         bottom: 0;
-        background-color: #E91E63;
+        background-color: #e91e63;
     }
 </style>
