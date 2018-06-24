@@ -8,22 +8,25 @@
         </header>
 
         <main>
-            <div class="container">
-                <pre><code>.container {</code></pre>
-                <pre><code>    width: 100%;</code></pre>
-                <pre><code>    background-color: #3f51b5;</code></pre>
-                <pre><code>    contain: paint;</code></pre>
-                <pre><code>}</code></pre>
+            <div class="container" :class="{contained}">
+                <code><pre>.container {</pre></code>
+                <code><pre>    width: 100%;</pre></code>
+                <code><pre>    background-color: #3f51b5;</pre></code>
+                <code>
+                    <input type="checkbox" v-model="contained">
+                    <pre>    contain: paint;</pre>
+                </code>
+                <code><pre>}</pre></code>
 
                 <div class="element">
-                    <pre><code>.element {</code></pre>
-                    <pre><code>    width: 50vmin;</code></pre>
-                    <pre><code>    height: 50vmin;</code></pre>
-                    <pre><code>    position: fixed;</code></pre>
-                    <pre><code>    right: 0;</code></pre>
-                    <pre><code>    bottom: 0;</code></pre>
-                    <pre><code>    background-color: #e91e63;</code></pre>
-                    <pre><code>}</code></pre>
+                    <code><pre>.element {</pre></code>
+                    <code><pre>    width: 50vmin;</pre></code>
+                    <code><pre>    height: 50vmin;</pre></code>
+                    <code><pre>    position: fixed;</pre></code>
+                    <code><pre>    right: 0;</pre></code>
+                    <code><pre>    bottom: 0;</pre></code>
+                    <code><pre>    background-color: #e91e63;</pre></code>
+                    <code><pre>}</pre></code>
                 </div>
             </div>
         </main>
@@ -32,7 +35,13 @@
 
 <script>
     export default {
-        name: 'App'
+        name: 'App',
+
+        data() {
+            return {
+                contained: false
+            };
+        }
     };
 </script>
 
@@ -58,20 +67,32 @@
 
     main div {
         padding: 5vmin;
+        color: #fff;
+    }
+
+    main code {
+        position: relative;
+        font-size: 20px;
     }
 
     main pre {
         margin: 0;
     }
 
-    main code {
-        display: block;
-        color: #fff;
+    main input {
+        position: absolute;
+        top: 5px;
+        left: 3ch;
+        z-index: 1;
     }
 
     .container {
         width: 100%;
         background-color: #3f51b5;
+    }
+
+    .container.contained {
+        contain: paint;
     }
 
     .element {
